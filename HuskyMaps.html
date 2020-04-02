@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Landing - Forty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Conner Wallace</strong></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/HuskyMaps/mapImage.png" alt="" />
+							</span>
+							<header class="major">
+								<h1>HuskyMaps</h1>
+							</header>
+							<div class="content">
+								<p>Final project for my Data Structures and Parallelism class. Provides realtime routing to any location using contraction hierarchies determined by the importance of a road.
+								</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Get There Faster</h2>
+									</header>
+									<p>Utilizing Java's functional stream processing for parallelism to create the contraction hierarchies, this routing algorithm is about 1.5 times faster than the traditional non-parallel approach.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<span class="image">
+										<img src="images/HuskyMaps/server-rastering-example.png" alt="" data-position="center center" />
+									</span>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Rastering</h3>
+											</header>
+											<p>The first part of this project's goal was to implement the backend for<a href="https://github.com/connermwallace/HuskyMaps/blob/master/server/logic/Rasterer.java"> HuskyMaps Rasterer.java</a>. This involved creating a rastering algorithm to decide which images to display. The underlying algorithm for this section was to use the search query's top left point and bottom right point, as well as the depth of the zoom, to determine the dimensions of the tile array to be returned. Next, using the AStar path-finding algorithm I implemented earlier in the course, I returned the shortest path between two points.
+											</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<span class="image">
+										<img src="images/HuskyMaps/Shortcut_in_a_shortest_path.svg" alt="" data-position="center center" />
+									</span>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Rastering</h3>
+											</header>
+											<p>The second part of this project involved implementing the contraction hierarchies algorithm on <a href="https://github.com/connermwallace/HuskyMaps/blob/master/ContractedStreetMapGraph.java">HuskyMaps Graph</a>. This is a two part algorithm designed for creating a smarter representation of a street map in a graph. Essentially, we go through the graph and assign shortcuts two the nodes which represent "important" roads. This is because generally it does not make sense to explore all the highway exits and smaller roads once you are on the highway. The parallel algorithm was the following:
+
+												While there are uncontracted nodes:
+											<ul>
+											<li>Update each roads importance while caching the road's associated shortcuts in parallel.</li>	
+											<li>Create a set of independent nodes in parallel.</li>	
+											<li>Contract each independent node.</li>	
+											<li>Remove the contracted nodes from the uncontracted nodes.</li>	
+											</ul>
+
+												The parallel work was done using Java's functional interfaces as well as Lambda expressions.
+											</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a span class="image">
+										<img src="images/HuskyMaps/mapImage.png" alt="" data-position="25% 25%" />
+									</span>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>The Result</h3>
+											</header>
+											<p>Now, any husky is capable of navigating their way through the U-District. Made in collaboration with code from CSE 332, Kevin Lin,  <a href="https://courses.cs.washington.edu/courses/cse332/20wi/homework/server/">HuskyMaps Server </a>,  <a href="https://courses.cs.washington.edu/courses/cse332/20wi/homework/contraction/"> Contraction Hierarchies</a></p>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>More Information</h2>
+									</header>
+									<p>The project is currently available on my personal GitLab under a private repo to prevent plagiarism. Please feel free to email me if you would like to see more.</p>
+									<ul class="actions">
+										<li><a href="https://gitlab.cs.washington.edu/cse332-20wi-students/connerw/tree/master/huskymaps" class="button next">GitLab</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
