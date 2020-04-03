@@ -2794,7 +2794,7 @@ input, select, textarea {
 				display: block;
 				height: 100%;
 				left: 0;
-				opacity: 0.2;
+				opacity: 0.85;
 				position: absolute;
 				width: 100%;
 				z-index: 2;
@@ -2833,7 +2833,7 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #977c48;
+				background-color: #6fc3df;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
@@ -2841,7 +2841,7 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #5f6bce;
+				background-color: #ec8d81;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
