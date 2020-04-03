@@ -116,6 +116,7 @@
 			}
 		});
 
+	
 	// Tiles.
 		var $tiles = $('.tiles > article');
 
