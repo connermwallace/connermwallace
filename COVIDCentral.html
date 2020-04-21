@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Landing - Forty by HTML5 UP</title>
+		<title>Conner Wallace</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -72,9 +72,9 @@
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Rastering</h3>
+												<h3>See it for yourself.</h3>
 											</header>
-											<p>The first part of this project's goal was to implement the backend for<a href="https://github.com/connermwallace/HuskyMaps/blob/master/server/logic/Rasterer.java"> HuskyMaps Rasterer.java</a>. This involved creating a rastering algorithm to decide which images to display. The underlying algorithm for this section was to use the search query's top left point and bottom right point, as well as the depth of the zoom, to determine the dimensions of the tile array to be returned. Next, using the AStar path-finding algorithm I implemented earlier in the course, I returned the shortest path between two points.
+											<p>Studies have shown that people are more likely to believe something when they see it for themselves. The goal of CovidCentral was to demystify the information hidden in large data sets by showing relevant visualizations.
 											</p>
 										</div>
 									</div>
@@ -88,31 +88,21 @@
 											<header class="major">
 												<h3>Rastering</h3>
 											</header>
-											<p>The second part of this project involved implementing the contraction hierarchies algorithm on <a href="https://github.com/connermwallace/HuskyMaps/blob/master/ContractedStreetMapGraph.java">HuskyMaps Graph</a>. This is a two part algorithm designed for creating a smarter representation of a street map in a graph. Essentially, we go through the graph and assign shortcuts two the nodes which represent "important" roads. This is because generally it does not make sense to explore all the highway exits and smaller roads once you are on the highway. The parallel algorithm was the following:
-
-												While there are uncontracted nodes:
-											<ul>
-											<li>Update each roads importance while caching the road's associated shortcuts in parallel.</li>	
-											<li>Create a set of independent nodes in parallel.</li>	
-											<li>Contract each independent node.</li>	
-											<li>Remove the contracted nodes from the uncontracted nodes.</li>	
-											</ul>
-
-												The parallel work was done using Java's functional interfaces as well as Lambda expressions.
-											</p>
+											<p>There are three main questions people tend to have regarding the COVID-19 virus. How many people have died? How many people have it? Finally, are we flattening the curve? The graphs update each day to day to keep users up to date.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a span class="image">
-										<img src="images/COVIDCentral/mockup1.jpg" alt="" data-position="25% 25%" />
+									<span class="image">
+										<img src="images/COVIDCentral/mockup1.jpg" alt="" data-position="center center" />
 									</span>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>The Result</h3>
+												<h3>What's next?												</h3>
 											</header>
-											<p>Now, any husky is capable of navigating their way through the U-District. Made in collaboration with code from CSE 332, Kevin Lin,  <a href="https://courses.cs.washington.edu/courses/cse332/20wi/homework/server/">HuskyMaps Server </a>,  <a href="https://courses.cs.washington.edu/courses/cse332/20wi/homework/contraction/"> Contraction Hierarchies</a></p>
+											<p>Before the site was even indexed by Google the site cultivated over 400 unique users. This was done organically through word of mouth and similar channels.
+										</p>
 										</div>
 									</div>
 								</section>
@@ -124,9 +114,9 @@
 									<header class="major">
 										<h2>More Information</h2>
 									</header>
-									<p>The project is currently available on my personal GitLab under a private repo to prevent plagiarism. Please feel free to email me if you would like to see more.</p>
+									<p>The project is currently available on my personal Github under a private repo to prevent plagiarism. Please feel free to email me if you would like to see more.</p>
 									<ul class="actions">
-										<li><a href="https://gitlab.cs.washington.edu/cse332-20wi-students/connerw/tree/master/huskymaps" class="button next">GitLab</a></li>
+										<li><a href="mailto:connerwallace@uw.edu" class="button next">Contact Me</a></li>
 									</ul>
 								</div>
 							</section>

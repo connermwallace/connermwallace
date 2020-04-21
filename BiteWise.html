@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Landing - Forty by HTML5 UP</title>
+		<title>Conner Wallace</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -38,13 +38,13 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/HuskyMaps/mapImage.png" alt="" />
+								<img src="images/BiteWise/bitewiseLayeredScreen.png" alt="" />
 							</span>
 							<header class="major">
 								<h1>HuskyMaps</h1>
 							</header>
 							<div class="content">
-								<p>Final project for my Data Structures and Parallelism class. Provides realtime routing to any location using contraction hierarchies determined by the importance of a road.
+								<p>Winning project for Capital One's Software Engineering Summit 2019.
 								</p>
 							</div>
 						</div>
@@ -57,9 +57,11 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Get There Faster</h2>
+										<h2>The Problem</h2>
 									</header>
-									<p>Utilizing Java's functional stream processing for parallelism to create the contraction hierarchies, this routing algorithm is about 1.5 times faster than the traditional non-parallel approach.</p>
+									<p>Before Bitewise, there was no convenient way to derive specific products from something as simple as a picture. If you went out to eat and saw an interesting dish you wanted to make later, or even saw something on social media, you had no practical way of figuring out what went into making it.
+									
+									</p>
 								</div>
 							</section>
 
@@ -67,52 +69,31 @@
 							<section id="two" class="spotlights">
 								<section>
 									<span class="image">
-										<img src="images/HuskyMaps/server-rastering-example.png" alt="" data-position="center center" />
+										<img src="images/BiteWise/computerVision.png" alt="" data-position="center center" />
 									</span>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Rastering</h3>
+												<h3>The Solution</h3>
 											</header>
-											<p>The first part of this project's goal was to implement the backend for<a href="https://github.com/connermwallace/HuskyMaps/blob/master/server/logic/Rasterer.java"> HuskyMaps Rasterer.java</a>. This involved creating a rastering algorithm to decide which images to display. The underlying algorithm for this section was to use the search query's top left point and bottom right point, as well as the depth of the zoom, to determine the dimensions of the tile array to be returned. Next, using the AStar path-finding algorithm I implemented earlier in the course, I returned the shortest path between two points.
-											</p>
+											<p>All the user needs to do is upload a photo, and Bitewise handles the rest.
+
+												Image bytecode data is first stored in Google Firebase, where the hosted url is then passed into Clarifai's food recognition API. The output of that is refined through Spoonacular's product data API asynchronously to offer specific product recommendations and reference prices which are dynamically summed according to selected products.</p>
 										</div>
 									</div>
 								</section>
 								<section>
 									<span class="image">
-										<img src="images/HuskyMaps/Shortcut_in_a_shortest_path.svg" alt="" data-position="center center" />
+										<img src="images/BiteWise/bitewiseLayeredScreen.png" alt="" data-position="center center" />
 									</span>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Rastering</h3>
+												<h3>What's next?												</h3>
 											</header>
-											<p>The second part of this project involved implementing the contraction hierarchies algorithm on <a href="https://github.com/connermwallace/HuskyMaps/blob/master/ContractedStreetMapGraph.java">HuskyMaps Graph</a>. This is a two part algorithm designed for creating a smarter representation of a street map in a graph. Essentially, we go through the graph and assign shortcuts two the nodes which represent "important" roads. This is because generally it does not make sense to explore all the highway exits and smaller roads once you are on the highway. The parallel algorithm was the following:
-
-												While there are uncontracted nodes:
-											<ul>
-											<li>Update each roads importance while caching the road's associated shortcuts in parallel.</li>	
-											<li>Create a set of independent nodes in parallel.</li>	
-											<li>Contract each independent node.</li>	
-											<li>Remove the contracted nodes from the uncontracted nodes.</li>	
-											</ul>
-
-												The parallel work was done using Java's functional interfaces as well as Lambda expressions.
-											</p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a span class="image">
-										<img src="images/HuskyMaps/mapImage.png" alt="" data-position="25% 25%" />
-									</span>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>The Result</h3>
-											</header>
-											<p>Now, any husky is capable of navigating their way through the U-District. Made in collaboration with code from CSE 332, Kevin Lin,  <a href="https://courses.cs.washington.edu/courses/cse332/20wi/homework/server/">HuskyMaps Server </a>,  <a href="https://courses.cs.washington.edu/courses/cse332/20wi/homework/contraction/"> Contraction Hierarchies</a></p>
+											<p>In the future, as we scale, we could continue to layer API's to retrieve specific products or even train a more granular machine learning model that recognizes brands (or at least more popular ones).
+												In addition, Bitewise would benefit greatly under a partnership with big grocery chains like Walmart or Whole Foods, and could provide even more accurate and relevant data with access to developer and/or internal API's.	
+												</p>
 										</div>
 									</div>
 								</section>
@@ -124,9 +105,9 @@
 									<header class="major">
 										<h2>More Information</h2>
 									</header>
-									<p>The project is currently available on my personal GitLab under a private repo to prevent plagiarism. Please feel free to email me if you would like to see more.</p>
+									<p>The project is currently available on our Team's Github. Please feel free to email me if you would like to see more.</p>
 									<ul class="actions">
-										<li><a href="https://gitlab.cs.washington.edu/cse332-20wi-students/connerw/tree/master/huskymaps" class="button next">GitLab</a></li>
+										<li><a href="https://github.com/bitewise-club/bitewise-app" class="button next">Github</a></li>
 									</ul>
 								</div>
 							</section>
